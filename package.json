@@ -1,0 +1,22 @@
+{
+	"name": "vercel-monorepo-example",
+	"private": true,
+	"scripts": {
+		"format": "pnpm -r --stream format",
+		"validate": "pnpm -r --stream validate",
+		"clean": "pnpm -r --stream clean",
+		"build": "pnpm -r --stream build",
+		"install-deps": "pnpm install --frozen-lockfile",
+		"upgrade-deps": "pnpm update -r --latest -i && pnpm install"
+	},
+	"author": "Matteo Ronchi <matteo.ronchi@gmail.com> (https://github.com/cef62)",
+	"license": "ISC",
+	"pnpm": {
+		"overrides": {
+			"@local/components": "workspace:*"
+		}
+	},
+	"devDependencies": {
+		"prettier": "3.0.2"
+	}
+}
